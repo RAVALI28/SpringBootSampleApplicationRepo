@@ -1,0 +1,2 @@
+# SpringBootSampleApplicationRepo
+Spring boot projects
