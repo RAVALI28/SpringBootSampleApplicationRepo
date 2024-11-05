@@ -1,8 +1,10 @@
 package com.springlearning.springboot_realtime_jpa_app.Repository;
 
 import com.springlearning.springboot_realtime_jpa_app.Model.Product;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
+
 
 public interface ProductRepo {
 

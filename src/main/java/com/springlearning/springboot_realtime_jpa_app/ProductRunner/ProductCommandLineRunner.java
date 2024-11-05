@@ -13,8 +13,8 @@ import java.util.Optional;
 @Component
 public class ProductCommandLineRunner implements CommandLineRunner {
 
-    @Autowired
-    private ProductRepo productRepoImpl;
+//    @Autowired
+//    private ProductRepo productRepoImpl;
 
     @Autowired
     private ProductSpringDataJpaRepository productSpringDataJpaRepository;
@@ -47,9 +47,18 @@ public class ProductCommandLineRunner implements CommandLineRunner {
         System.out.println("====================================");
 
 
-        Product Google = new Product("Google Pixel", "google product", 1000.0, 10);
+        //Product Google = new Product("Google Pixel", "google product", 1000.0, 10);
        // productRepoImpl.updateProductById(Google, 2);
-        //productSpringDataJpaRepository.s(Google, 2);
+        //Updating the Product
+        Product existingProduct = productSpringDataJpaRepository.getById(2);
+        Product Applevision = new Product("Apple Vision", "Apple product", 499.0, 2);
+        existingProduct.setName(Applevision.getName());
+        existingProduct.setDescription(Applevision.getDescription());
+        existingProduct.setPrice(Applevision.getPrice());
+        existingProduct.setStockQuantity(Applevision.getStockQuantity());
+        productSpringDataJpaRepository.save(existingProduct);
+
+
 
         System.out.println("======================================");
 

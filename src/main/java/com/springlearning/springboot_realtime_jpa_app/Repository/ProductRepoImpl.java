@@ -9,8 +9,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 //JPA and Hibernate Implementation
+
 @Repository
-@Transactional
 public class ProductRepoImpl implements ProductRepo {
 
     @PersistenceContext
